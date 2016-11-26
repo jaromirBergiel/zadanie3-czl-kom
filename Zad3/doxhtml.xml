@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="doxhtml.xsl"?>
+<Zadanie3>
+	<informacje>
+		<opis>
+			W nagłówku dokumentu zawarto imiona i nazwiska autorów oraz datę ostatniej modyfikacji.
+			Dalsza część dokumentu zawiera spis książek uwzględniając szczegóły takie jak: tytuł, nazwisko autora, liczba stron oraz cena. 
+		</opis>
+		<studenci>
+			<student id="s1">Jaromir Bergiel</student>
+			<student id="s2">Adrian Pusty</student>
+		</studenci>
+		<modyfikacja>
+			<data>
+				<rok>2016</rok>
+				<miesiąc>11</miesiąc>
+				<dzień>06</dzień>
+			</data>
+		</modyfikacja>
+	</informacje>
+	
+
+	<książki>			
+		<książka id="k1">
+			<tytuł gatunek="inny">Symfonia C++</tytuł>
+			<autor aut="a1" />
+			<strony>1094</strony>
+			<cena waluta="eur">65.99</cena>
+			<dział_książki dział="d1" />
+			<ocena_użytkowników>7.7</ocena_użytkowników>
+			<czy_wypożyczona>TAK
+				<data>
+					<rok>2016</rok>
+					<miesiąc>02</miesiąc>
+					<dzień>06</dzień>
+				</data>
+			</czy_wypożyczona>
+		</książka>
+		<książka id="k2" >
+			<tytuł gatunek="inny">Thinking in Java</tytuł>
+			<autor aut="a2" />
+			<strony>1256</strony>
+			<cena waluta="zł">83.21</cena>
+			<dział_książki dział="d1" />
+			<ocena_użytkowników>6.5</ocena_użytkowników>
+			<czy_wypożyczona>NIE</czy_wypożyczona>
+		</książka>
+		<książka id="k3">
+			<tytuł gatunek="inny">Zrozumiec programowanie</tytuł>
+			<autor aut="a3" />
+			<strony>620</strony>
+			<cena waluta="zł">47.00</cena>
+			<dział_książki dział="d1" />
+			<ocena_użytkowników>8.6</ocena_użytkowników>
+			<czy_wypożyczona>NIE</czy_wypożyczona>
+		</książka>
+		<książka id="k4" >
+			<tytuł gatunek="inny">UML 2.0</tytuł>
+			<autor aut="a4" />
+			<strony>230</strony>
+			<cena waluta="zł">145.50</cena>
+			<dział_książki dział="d1" />
+			<ocena_użytkowników>9.8</ocena_użytkowników>
+			<czy_wypożyczona>TAK
+				<data>
+					<rok>2016</rok>
+					<miesiąc>03</miesiąc>
+					<dzień>28</dzień>
+				</data>
+			</czy_wypożyczona>
+		</książka>
+		<książka id="k5" >
+			<tytuł gatunek="klasyka">W pustyni i w puszczy</tytuł>
+			<autor aut="a5" />
+			<strony>296</strony>
+			<cena waluta="zł">2.54</cena>
+			<dział_książki dział="d2" />
+			<ocena_użytkowników>5.2</ocena_użytkowników>
+			<czy_wypożyczona>NIE</czy_wypożyczona>
+		</książka>
+		<książka id="k6" >
+			<tytuł gatunek="inny">Kuchnia polska</tytuł>
+			<autor aut="a6" />
+			<strony>736</strony>
+			<cena waluta="zł">4.29</cena>
+			<dział_książki dział="d3" />
+			<ocena_użytkowników>6.8</ocena_użytkowników>
+			<czy_wypożyczona>TAK
+				<data>
+					<rok>2015</rok>
+					<miesiąc>06</miesiąc>
+					<dzień>29</dzień>
+				</data>
+			</czy_wypożyczona>
+		</książka>
+		<książka id="k7" >
+			<tytuł gatunek="fantastyka">Harry Potter i Kamień Filozoficzny</tytuł>
+			<autor aut="a7" />
+			<strony>328</strony>
+			<cena waluta="zł">18.85</cena>
+			<dział_książki dział="d2" />
+			<ocena_użytkowników>6.5</ocena_użytkowników>
+			<czy_wypożyczona>NIE</czy_wypożyczona>
+		</książka>
+		<książka id="k8" >
+			<tytuł gatunek="komedia">Chateau de Sable</tytuł>
+			<autor aut="a8" />
+			<strony>104</strony>
+			<cena waluta="zł">23.09</cena>
+			<dział_książki dział="d4" />
+			<ocena_użytkowników>7.2</ocena_użytkowników>
+			<czy_wypożyczona>TAK
+				<data>
+					<rok>2016</rok>
+					<miesiąc>01</miesiąc>
+					<dzień>31</dzień>
+				</data>
+			</czy_wypożyczona>
+		</książka>
+		<książka id="k9" >
+			<tytuł gatunek="horror">Mała zła czarownica</tytuł>
+			<autor aut="a9" />
+			<strony>73</strony>
+			<cena waluta="zł">56.90</cena>
+			<dział_książki dział="d2" />
+			<ocena_użytkowników>2.3</ocena_użytkowników>
+			<czy_wypożyczona>NIE</czy_wypożyczona>
+		</książka>
+		<książka id="k10" >
+			<tytuł gatunek="inny">Czastki Przyciagania</tytuł>
+			<autor aut="a10" />
+			<strony>200</strony>
+			<cena waluta="zł">62.98</cena>
+			<dział_książki dział="d5" />
+			<ocena_użytkowników>9.0</ocena_użytkowników>
+			<czy_wypożyczona>NIE</czy_wypożyczona>
+		</książka>
+		<książka id="k11" >
+			<tytuł gatunek="komedia">X, tom 6</tytuł>
+			<autor aut="a11" />
+			<strony>184</strony>
+			<cena waluta="zł">18.85</cena>
+			<dział_książki dział="d4" />
+			<ocena_użytkowników>7.0</ocena_użytkowników>
+			<czy_wypożyczona>TAK
+				<data>
+					<rok>2016</rok>
+					<miesiąc>06</miesiąc>
+					<dzień>25</dzień>
+				</data>
+			</czy_wypożyczona>
+		</książka>
+		<książka id="k12" >
+			<tytuł gatunek="fantastyka">Harry Potter i Przeklęte Dziecko</tytuł>
+			<autor aut="a7" />
+			<strony>320</strony>
+			<cena waluta="zł">26.52</cena>
+			<dział_książki dział="d2" />
+			<ocena_użytkowników>5.0</ocena_użytkowników>
+			<czy_wypożyczona>TAK
+				<data>
+					<rok>2016</rok>
+					<miesiąc>10</miesiąc>
+					<dzień>01</dzień>
+				</data>
+			</czy_wypożyczona>
+		</książka>
+		<książka id="k13">
+			<tytuł gatunek="klasyka">Never Never</tytuł>
+			<autor aut="a12" />
+			<strony>300</strony>
+			<cena waluta="zł">25.94</cena>
+			<dział_książki dział="d6" />
+			<ocena_użytkowników>8.8</ocena_użytkowników>
+			<czy_wypożyczona>NIE</czy_wypożyczona>
+		</książka>
+		<książka id="k14" >
+			<tytuł gatunek="fantastyka">Harry Potter i Komnata Tajemnic</tytuł>
+			<autor aut="a7" />
+			<strony>368</strony>
+			<cena waluta="zł">18.84</cena>
+			<dział_książki dział="d2" />
+			<ocena_użytkowników>6.0</ocena_użytkowników>
+			<czy_wypożyczona>TAK
+				<data>
+					<rok>2016</rok>
+					<miesiąc>12</miesiąc>
+					<dzień>20</dzień>
+				</data>
+			</czy_wypożyczona>
+		</książka>
+		<książka id="k15" >
+			<tytuł gatunek="fantastyka">Small Gods</tytuł>
+			<autor aut="a13" />
+			<strony>380</strony>
+			<cena waluta="zł">20.78</cena>
+			<dział_książki dział="d7" />
+			<ocena_użytkowników>6.8</ocena_użytkowników>
+			<czy_wypożyczona>TAK
+				<data>
+					<rok>2016</rok>
+					<miesiąc>10</miesiąc>
+					<dzień>09</dzień>
+				</data>
+			</czy_wypożyczona>
+		</książka>
+		<książka id="k16" >
+			<tytuł gatunek="fantastyka">MORT: A Discworld Big Comic</tytuł>
+			<autor aut="a13" />
+			<strony>94</strony>
+			<cena waluta="zł">28.00</cena>
+			<dział_książki dział="d7" />
+			<ocena_użytkowników>6.6</ocena_użytkowników>
+			<czy_wypożyczona>TAK
+				<data>
+					<rok>2015</rok>
+					<miesiąc>05</miesiąc>
+					<dzień>08</dzień>
+				</data>
+			</czy_wypożyczona>
+		</książka>
+		<książka id="k17" >
+			<tytuł gatunek="fantastyka">Kolor magii</tytuł>
+			<autor aut="a13" />
+			<strony>208</strony>
+			<cena waluta="zł">19.44</cena>
+			<dział_książki dział="d7" />
+			<ocena_użytkowników>9.7</ocena_użytkowników>
+			<czy_wypożyczona>NIE</czy_wypożyczona>
+		</książka>
+		<książka id="k18" >
+			<tytuł gatunek="fantastyka">Blask fantastyczny</tytuł>
+			<autor aut="a13" />
+			<strony>236</strony>
+			<cena waluta="zł">17.06</cena>
+			<dział_książki dział="d7" />
+			<ocena_użytkowników>10.0</ocena_użytkowników>
+			<czy_wypożyczona>NIE</czy_wypożyczona>
+		</książka>
+		<książka id="k19">
+			<tytuł gatunek="fantastyka">Solaris</tytuł>
+			<autor aut="a14" />
+			<strony>340</strony>
+			<cena waluta="zł">22.69</cena>
+			<dział_książki dział="d7" />
+			<ocena_użytkowników>8.9</ocena_użytkowników>
+			<czy_wypożyczona>TAK
+				<data>
+					<rok>2008</rok>
+					<miesiąc>02</miesiąc>
+					<dzień>21</dzień>
+				</data>
+			</czy_wypożyczona>
+		</książka>
+		<książka id="k20" >
+			<tytuł gatunek="na_faktach">Cmentarz w Pradze</tytuł>
+			<autor aut="a15" />
+			<strony>504</strony>
+			<cena waluta="zł">25.35</cena>
+			<dział_książki dział="d8" />
+			<ocena_użytkowników>9.6</ocena_użytkowników>
+			<czy_wypożyczona>NIE</czy_wypożyczona>
+		</książka>
+		<książka id="k21" >
+			<tytuł gatunek="na_faktach">Myszy i ludzie</tytuł>
+			<autor aut="a16" />
+			<strony>120</strony>
+			<cena waluta="zł">14.70</cena>
+			<dział_książki dział="d8" />
+			<ocena_użytkowników>3.7</ocena_użytkowników>
+			<czy_wypożyczona>NIE</czy_wypożyczona>
+		</książka>	
+	</książki>
+
+	<autorzy>
+		<aut id="a1" narodowość="Polak">Grebosz</aut>
+		<aut id="a2" narodowość="Amerykanin">Eckel</aut>
+		<aut id="a3" narodowość="Szwajcar">Coldwind</aut>
+		<aut id="a4" narodowość="Anglik">Miles</aut>
+		<aut id="a5" narodowość="Polak">Sienkiewicz</aut>
+		<aut id="a6">praca zbiorowa</aut>
+		<aut id="a7" narodowość="Angielka">Rowling</aut>
+		<aut id="a8" narodowość="Szwajcar">Peeters</aut>
+		<aut id="a9" narodowość="Czech">Ctvrtek</aut>
+		<aut id="a10" narodowość="Polka">Hatalska</aut>
+		<aut id="a11" narodowość="Japonka">Ohkawa</aut>
+		<aut id="a12" narodowość="Polak">Grzegorzewski</aut>
+		<aut id="a13" narodowość="Anglik">Pratchett</aut>
+		<aut id="a14" narodowość="Polak">Lem</aut>
+		<aut id="a15" narodowość="Wloch">Eco</aut>
+		<aut id="a16" narodowość="Amerykanin">Steinbeck</aut>
+	</autorzy>
+	
+	<działy>
+		<dział id='d1'>Informatyka</dział>
+		<dział id='d2'>Literatura dziecięca</dział>
+		<dział id='d3'>Poradniki</dział>
+		<dział id='d4'>Komiks</dział>
+		<dział id='d5'>Finanse</dział>
+		<dział id='d6'>Literatura młodzieżowa</dział>
+		<dział id='d7'>Fantastyka</dział>
+		<dział id='d8'>Literatura zagraniczna</dział>
+	</działy>
+</Zadanie3>
+
+
