@@ -17,8 +17,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<pages><xsl:value-of select="strony"/></pages>
 					<genre><xsl:value-of select="dział_książki/key('dział', @dział)"/></genre>
 					<rating><xsl:value-of select="ocena_użytkowników"/></rating>	
-					<price><xsl:value-of select="cena"/></price>
-					<vat><xsl:value-of select='format-number(cena*0.23, "#.00")'/></vat>		
+					<price><xsl:value-of select="cena"/> <xsl:value-of select="cena/@waluta"/></price>
+					<vat><xsl:value-of select='format-number(cena*0.23, "#.00")'/> <xsl:value-of select="cena/@waluta"/></vat>		
 				</book>
 				</xsl:if>
 			</xsl:for-each>
@@ -33,12 +33,19 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<pages><xsl:value-of select="strony"/></pages>
 					<genre><xsl:value-of select="dział_książki/key('dział', @dział)"/></genre>
 					<rating><xsl:value-of select="ocena_użytkowników"/></rating>	
-					<price><xsl:value-of select="cena"/></price>
-					<vat><xsl:value-of select='format-number(cena*0.23, "#.00")'/></vat>		
+					<price><xsl:value-of select="cena"/> <xsl:value-of select="cena/@waluta"/></price>
+					<vat><xsl:value-of select='format-number(cena*0.23, "#.00")'/> <xsl:value-of select="cena/@waluta"/></vat>		
 				</book>
 				</xsl:if>
 			</xsl:for-each>
 		</Książki_Poniżej500_stron>
+		<Autorzy_narodowość>
+			<Polak><xsl:value-of select="Zadanie3/autorzy/aut[narodowość=Polak] or Zadanie3/autorzy/aut[narodowość=Polka]"/></Polak>
+			<Amerykanin><xsl:value-of select="Zadanie3/autorzy/aut[narodowość=Amerykanin]"/></Amerykanin>
+			<Anglik><xsl:value-of select="Zadanie3/autorzy/aut[narodowość=Anglik] or Zadanie3/autorzy/aut[narodowość=Angielka]"/></Anglik>
+			<Szwajcar><xsl:value-of select="Zadanie3/autorzy/aut[narodowość=Szwajcar]"/></Szwajcar>
+			<Inna></Inna>		
+		</Autorzy_narodowość>
 	<Podsumowanie>
 		<Ksiązki>
 			<liczba_książek_ogółem><xsl:value-of select="count(//książka)"/></liczba_książek_ogółem>

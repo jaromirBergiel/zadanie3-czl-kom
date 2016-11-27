@@ -20,7 +20,7 @@
 			    <th>Strony</th>
 			    <th>Dział</th>
 			    <th>Cena</th>
-			    <th>VAT [zł]</th>
+			    <th>VAT</th>
 			    <th>Ocena</th>
 			</tr>
 			<xsl:for-each select="Zadanie3/Książki_Powyżej500_stron/book">
@@ -48,7 +48,7 @@
 			    <th>Strony</th>
 			    <th>Dział</th>
 			    <th>Cena</th>
-			    <th>VAT [zł]</th>
+			    <th>VAT</th>
 			    <th>Ocena</th>
 			</tr>
 			<xsl:for-each select="Zadanie3/Książki_Poniżej500_stron/book">
