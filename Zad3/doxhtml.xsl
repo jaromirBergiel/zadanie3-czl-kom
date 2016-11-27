@@ -10,60 +10,130 @@
 		<title>Biblioteka</title>
 	</head>
 	<body>
-	<table border="1" title="książki_ponad_500s" >
-		<tbody>
-		<caption><b>Ranking książek powyżej 500 stron</b></caption>
-	    <tr bgcolor="#9acd32">
-		    <th>Autor</th>
-		    <th>Tytuł</th>
-		    <th>Strony</th>
-		    <th>Dział</th>
-		    <th>Cena</th>
-		    <th>Ocena</th>
-		</tr>
-		<xsl:for-each select="Zadanie3/Książki_Powyżej500_stron/book">
-			<xsl:sort order="descending" select="rating" data-type="number"/>
-			<xsl:if test="pages &gt; 500">
-			<tr>
-				<th><xsl:value-of select="author"/></th>
-				<td><xsl:value-of select="title"/></td>
-				<th><xsl:value-of select="pages"/></th>
-				<th><xsl:value-of select="genre"/></th>
-				<th><xsl:value-of select="price"/></th>	
-				<th><xsl:value-of select="rating"/></th>
+
+		<h4>Ranking książek powyżej 500 stron</h4>
+		<table border="1" title="książki_ponad_500s" >
+			<tbody>
+		    <tr>
+			    <th>Autor</th>
+			    <th>Tytuł</th>
+			    <th>Strony</th>
+			    <th>Dział</th>
+			    <th>Cena</th>
+			    <th>Ocena</th>
 			</tr>
-			</xsl:if>
-		</xsl:for-each>
-		</tbody>
-	</table>
-	<br/><br/>
-	<table border="1" title="książki_poniżej_500s">
-		<tbody>
-		<caption><b>Ranking książek poniżej 500 stron</b></caption>
-	    <tr bgcolor="#9acd32">
-		    <th>Autor</th>
-		    <th>Tytuł</th>
-		    <th>Strony</th>
-		    <th>Dział</th>
-		    <th>Cena</th>
-		    <th>Ocena</th>
-		</tr>
-		<xsl:for-each select="Zadanie3/Książki_Poniżej500_stron/book">
-			<xsl:sort order="descending" select="rating" data-type="number"/>
-			<xsl:if test="pages &lt; 500">
-			<tr>
-				<th><xsl:value-of select="author"/></th>
-				<td><xsl:value-of select="title"/></td>
-				<th><xsl:value-of select="pages"/></th>
-				<th><xsl:value-of select="genre"/></th>
-				<th><xsl:value-of select="price"/></th>	
-				<th><xsl:value-of select="rating"/></th>
+			<xsl:for-each select="Zadanie3/Książki_Powyżej500_stron/book">
+				<xsl:sort order="descending" select="rating" data-type="number"/>
+				<xsl:if test="pages &gt; 500">
+				<tr>
+					<td><xsl:value-of select="author"/></td>
+					<td><xsl:value-of select="title"/></td>
+					<td><xsl:value-of select="pages"/></td>
+					<td><xsl:value-of select="genre"/></td>
+					<td><xsl:value-of select="price"/></td>	
+					<th><xsl:value-of select="rating"/></th>
+				</tr>
+				</xsl:if>
+			</xsl:for-each>
+			</tbody>
+		</table>
+		<h4>Ranking książek poniżej 500 stron</h4>
+		<table border="1" title="książki_poniżej_500s">
+			<tbody>
+		    <tr>
+			    <th>Autor</th>
+			    <th>Tytuł</th>
+			    <th>Strony</th>
+			    <th>Dział</th>
+			    <th>Cena</th>
+			    <th>Ocena</th>
 			</tr>
-			</xsl:if>
-		</xsl:for-each>
-		</tbody>
-	</table>
+			<xsl:for-each select="Zadanie3/Książki_Poniżej500_stron/book">
+				<xsl:sort order="descending" select="rating" data-type="number"/>
+				<xsl:if test="pages &lt; 500">
+				<tr>
+					<td><xsl:value-of select="author"/></td>
+					<td><xsl:value-of select="title"/></td>
+					<td><xsl:value-of select="pages"/></td>
+					<td><xsl:value-of select="genre"/></td>
+					<td><xsl:value-of select="price"/></td>	
+					<th><xsl:value-of select="rating"/></th>
+				</tr>
+				</xsl:if>
+			</xsl:for-each>
+			</tbody>
+		</table>
+		<h2>Podsumowanie:</h2>
+			<h4>Książki</h4>
+			<ol>
+		  		<li><b><i>Książki ogółem: </i></b><xsl:value-of select="Zadanie3/Podsumowanie/Ksiązki/liczba_książek_ogółem"/></li>
+		  		<li><b><i>Książki powyżej 500 str: </i></b><xsl:value-of select="Zadanie3/Podsumowanie/Ksiązki/liczba_książek_powyżej500str"/></li>
+		  		<li><b><i>Książki poniżej 500 str: </i></b><xsl:value-of select="Zadanie3/Podsumowanie/Ksiązki/liczba_książek_poniżej500str"/></li>
+		 	</ol>
+		 	<h4>Autorzy</h4>
+			<ol>
+		  		<li><b><i>Autorzy ogółem: </i></b><xsl:value-of select="Zadanie3/Podsumowanie/Autorzy/liczba_autorów_ogółem"/></li>
+		  		<li><b><i>Autorzy książek powyżej 500 str: </i></b><xsl:value-of select="Zadanie3/Podsumowanie/Autorzy/liczba_autorów_powyżej500str"/></li>
+		  		<li><b><i>Autorzy książek poniżej 500 str: </i></b><xsl:value-of select="Zadanie3/Podsumowanie/Autorzy/liczba_autorów_poniżej500str"/></li>
+		 	</ol>
+		 	<h4>Działy</h4>
+			<ol>
+		  		<li><b><i>Liczba działów dla wszystkich książek: </i></b><xsl:value-of select="Zadanie3/Podsumowanie/Działy/liczba_działów__książek_ogółem"/></li>
+		  		<li><b><i>Liczba działów dla książek &gt; 500str: </i></b><xsl:value-of select="Zadanie3/Podsumowanie/Działy/liczba_działów__książek_powyżej500str"/></li>
+		  		<li><b><i>Liczba działów dla książek &lt; 500str: </i></b><xsl:value-of select="Zadanie3/Podsumowanie/Działy/liczba_działów__książek_poniżej500str"/></li>
+		 	</ol>
+		 	<h4>Inne zestawienia</h4>
+			<ol>
+		  		<li><b><i>Średnia cena wszystkich książek: </i></b><xsl:value-of select="Zadanie3/Podsumowanie/Inne/średnia_cena_wszystkich"/></li>
+		  		<li><b><i>Średnia cena książek &gt; 500str: </i></b><xsl:value-of select="Zadanie3/Podsumowanie/Inne/średnia_cena_książek_powyzej500"/></li>
+		  		<li><b><i>Średnia cena książek &lt; 500str: </i></b><xsl:value-of select="Zadanie3/Podsumowanie/Inne/średnia_cena_książek_ponizej500"/></li>
+		  		<li><b><i>Data wygenerowania: </i></b><xsl:value-of select="Zadanie3/Podsumowanie/Inne/data_wygenerowania"/> </li>
+		 	</ol>
+  		<!-- <xsl:call-template name="podsumowanie"/> -->
 	</body>
 	</html>
-</xsl:template>
+	</xsl:template>
+	<!-- TEMPLATY POD SPODEM NIE DZIALAJA. ZAMIAST WYPISYWAC WARTOSC NP.21 TO WYPISUJA CALA ZAWARTOSC 21 KSIAZEK-->
+		<!-- <xsl:template name="podsumowanie" match="Zadanie3/Podsumowanie/Ksiązki">
+		  <div class="Podsumowanie">
+		  	<xsl:call-template name="książki" />
+		  </div>
+		</xsl:template>
+
+		<xsl:template name="książki" match="liczba_książek_ogółem">
+		  <ul>
+		  	<li><b>Książki ogółem:</b><xsl:value-of select="count(liczba_książek_ogółem)"/></li>
+		  </ul>
+		</xsl:template> -->
+
+	<!-- 	<xsl:template name="wszystkieKsiazki" match="liczba_książek_ogółem">
+		  Książki ogółem: <li><xsl:value-of select="."/></li>
+		  <br />
+		</xsl:template>
+		<xsl:template name="pow500str" match="liczba_książek_powyżej500str">
+		  Liczba książek powyżej 500 str: <li><xsl:value-of select="@value"/></li>
+		  <br />
+		</xsl:template>
+		<xsl:template name="pon500str" match="liczba_książek_poniżej500str">
+		  Liczba książek poniżej 500 str: <li><xsl:value-of select="@value"/></li>
+		  <br />
+		</xsl:template> -->
+<!-- 
+		<xsl:template match="Autorzy">
+		  Artist: <span style="color:#00ff00">
+		  <xsl:value-of select="."/></span>
+		  <br />
+		</xsl:template>
+
+		<xsl:template match="Działy">
+		  Title: <span style="color:#ff0000">
+		  <xsl:value-of select="."/></span>
+		  <br />
+		</xsl:template>
+
+		<xsl:template match="Inne">
+		  Artist: <span style="color:#00ff00">
+		  <xsl:value-of select="."/></span>
+		  <br />
+		</xsl:template> -->
 </xsl:stylesheet>
