@@ -56,10 +56,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<liczba_działów__książek_poniżej500str><xsl:value-of select="count(//książka[strony &lt; 500]/dział_książki/key('dział', @dział))"/></liczba_działów__książek_poniżej500str>
 		</Działy>
 		<Inne>
-			<średnia_cena_wszystkich><xsl:value-of select="sum(//cena) div count(//książka)"/></średnia_cena_wszystkich>
-			<średnia_cena_książek_powyzej500><xsl:value-of select="sum(//książka[strony &gt; 500]/cena) div count(//książka[strony &gt; 500])"/></średnia_cena_książek_powyzej500>
-			<średnia_cena_książek_ponizej500><xsl:value-of select="sum(//książka[strony &lt; 500]/cena) div count(//książka[strony &gt; 500])"/></średnia_cena_książek_ponizej500>
-			<data_wygenerowania><xsl:value-of  select="current-date()"/></data_wygenerowania>
+			<średnia_cena_wszystkich><xsl:value-of select='format-number(sum(//cena) div count(//książka), "#.00")'/></średnia_cena_wszystkich>
+			<średnia_cena_książek_powyzej500><xsl:value-of select='format-number(sum(//książka[strony &gt; 500]/cena) div count(//książka[strony &gt; 500]), "#.00")'/></średnia_cena_książek_powyzej500>
+			<średnia_cena_książek_ponizej500><xsl:value-of select='format-number(sum(//książka[strony &lt; 500]/cena) div count(//książka[strony &gt; 500]), "#.00")'/></średnia_cena_książek_ponizej500>
+			<data_wygenerowania><xsl:value-of  select="format-dateTime(current-dateTime(), 'Data: [D01]/[M01]/[Y0001] | Godzina: [H1]:[m01]') "/></data_wygenerowania>
 			<!--                                       ^do tego trzeba było zmienić wersje stylesheet do 2.0 -->
 		</Inne>
 		
