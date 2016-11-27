@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:variable name="output-namespace" select="'http://www.w3.org/1999/xhtml'"/>
+
 <xsl:output method="xhtml" version="1.0" encoding="utf-8"
 	doctype-public="-//W3C//DTD XHTML 1.1//EN"
 	doctype-system="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"/>
@@ -30,7 +33,7 @@
 					<td><xsl:value-of select="author"/></td>
 					<td><xsl:value-of select="title"/></td>
 					<td><xsl:value-of select="pages"/></td>
-					<td><xsl:value-of select="genre"/></td>
+					<td><xsl:apply-templates select="genre"/></td>
 					<td><xsl:value-of select="price"/></td>	
 					<td><xsl:value-of select="vat"/></td>
 					<th><xsl:value-of select="rating"/></th>
@@ -58,7 +61,7 @@
 					<td><xsl:value-of select="author"/></td>
 					<td><xsl:value-of select="title"/></td>
 					<td><xsl:value-of select="pages"/></td>
-					<td><xsl:value-of select="genre"/></td>
+					<xsl:apply-templates select="genre"/>
 					<td><xsl:value-of select="price"/></td>
 					<td><xsl:value-of select="vat"/></td>		
 					<th><xsl:value-of select="rating"/></th>
@@ -117,5 +120,13 @@
 		 	</ol>
 	</body>
 	</html>
+	</xsl:template>
+	
+	<xsl:template match="genre">
+	<xsl:element name="font" namespace="{$output-namespace}">
+			<xsl:attribute name="size"><xsl:value-of select="3"/></xsl:attribute>
+			<xsl:attribute name="color"><xsl:value-of select="'red'"/></xsl:attribute>
+		<xsl:value-of select="node()"/>
+	</xsl:element>
 	</xsl:template>
 </xsl:stylesheet>
