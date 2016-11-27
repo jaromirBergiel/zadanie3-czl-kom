@@ -40,12 +40,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:for-each>
 		</Książki_Poniżej500_stron>
 		<Autorzy_narodowość>
-			<xsl:for-each select="Zadanie3/autorzy">
+			<xsl:for-each select="Zadanie3/autorzy/aut">
 				<xsl:choose>
-					<xsl:when test="@narodowość = 'Polak' or 'Polka'">
+					<xsl:when test="@narodowość = 'Polak'">
 						<Polak><xsl:value-of select="."/></Polak>
 					</xsl:when>
-					<xsl:when test="@narodowość = 'Anglik' or 'Angielka'">
+					<xsl:when test="@narodowość = 'Anglik'">
 						<Anglik><xsl:value-of select="."/></Anglik>
 					</xsl:when>
 					<xsl:when test="@narodowość = 'Amerykanin'">
