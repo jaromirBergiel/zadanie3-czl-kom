@@ -16,7 +16,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<title><xsl:value-of select="tytuł"/></title>
 					<pages><xsl:value-of select="strony"/></pages>
 					<genre><xsl:value-of select="dział_książki/key('dział', @dział)"/></genre>
-					<rating><xsl:value-of select="ocena_użytkowników"/></rating>	
+					<rating><xsl:apply-templates select="ocena_użytkowników"/></rating>	
 					<price><xsl:value-of select="cena"/> <xsl:value-of select="cena/@waluta"/></price>
 					<vat><xsl:value-of select='format-number(cena*0.23, "#.00")'/> <xsl:value-of select="cena/@waluta"/></vat>		
 				</book>
@@ -32,7 +32,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<title><xsl:value-of select="tytuł"/></title>
 					<pages><xsl:value-of select="strony"/></pages>
 					<genre><xsl:value-of select="dział_książki/key('dział', @dział)"/></genre>
-					<rating><xsl:value-of select="ocena_użytkowników"/></rating>	
+					<rating><xsl:apply-templates select="ocena_użytkowników"/></rating>	
 					<price><xsl:value-of select="cena"/> <xsl:value-of select="cena/@waluta"/></price>
 					<vat><xsl:value-of select='format-number(cena*0.23, "#.00")'/> <xsl:value-of select="cena/@waluta"/></vat>		
 				</book>
@@ -75,4 +75,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</Zadanie3>
 	
 </xsl:template>
+
+<xsl:template match="ocena_użytkowników">
+  <xsl:value-of select="."/> gwiazdek</xsl:template>
+
 </xsl:stylesheet>
