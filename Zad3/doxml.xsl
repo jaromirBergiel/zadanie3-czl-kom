@@ -17,7 +17,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<pages><xsl:value-of select="strony"/></pages>
 					<genre><xsl:value-of select="dział_książki/key('dział', @dział)"/></genre>
 					<rating><xsl:value-of select="ocena_użytkowników"/></rating>	
-					<price><xsl:value-of select="cena"/></price>		
+					<price><xsl:value-of select="cena"/></price>
+					<vat><xsl:value-of select='format-number(cena*0.23, "#.00")'/></vat>		
 				</book>
 				</xsl:if>
 			</xsl:for-each>
@@ -32,7 +33,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<pages><xsl:value-of select="strony"/></pages>
 					<genre><xsl:value-of select="dział_książki/key('dział', @dział)"/></genre>
 					<rating><xsl:value-of select="ocena_użytkowników"/></rating>	
-					<price><xsl:value-of select="cena"/></price>		
+					<price><xsl:value-of select="cena"/></price>
+					<vat><xsl:value-of select='format-number(cena*0.23, "#.00")'/></vat>		
 				</book>
 				</xsl:if>
 			</xsl:for-each>

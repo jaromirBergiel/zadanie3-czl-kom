@@ -20,6 +20,7 @@
 			    <th>Strony</th>
 			    <th>Dział</th>
 			    <th>Cena</th>
+			    <th>VAT [zł]</th>
 			    <th>Ocena</th>
 			</tr>
 			<xsl:for-each select="Zadanie3/Książki_Powyżej500_stron/book">
@@ -31,6 +32,7 @@
 					<td><xsl:value-of select="pages"/></td>
 					<td><xsl:value-of select="genre"/></td>
 					<td><xsl:value-of select="price"/></td>	
+					<td><xsl:value-of select="vat"/></td>
 					<th><xsl:value-of select="rating"/></th>
 				</tr>
 				</xsl:if>
@@ -46,6 +48,7 @@
 			    <th>Strony</th>
 			    <th>Dział</th>
 			    <th>Cena</th>
+			    <th>VAT [zł]</th>
 			    <th>Ocena</th>
 			</tr>
 			<xsl:for-each select="Zadanie3/Książki_Poniżej500_stron/book">
@@ -56,7 +59,8 @@
 					<td><xsl:value-of select="title"/></td>
 					<td><xsl:value-of select="pages"/></td>
 					<td><xsl:value-of select="genre"/></td>
-					<td><xsl:value-of select="price"/></td>	
+					<td><xsl:value-of select="price"/></td>
+					<td><xsl:value-of select="vat"/></td>		
 					<th><xsl:value-of select="rating"/></th>
 				</tr>
 				</xsl:if>
