@@ -67,6 +67,28 @@
 			</xsl:for-each>
 			</tbody>
 		</table>
+		<h4>Narodowość autorów</h4>
+		<xsl:for-each select="Zadanie3/Autorzy_narodowość">
+	      <xsl:choose>
+	        <xsl:when test="Polak">
+	          <p><xsl:value-of select="Polak"/> jest narodowości polskiej</p>
+	        </xsl:when>
+	        <xsl:when test="Amerykanin">
+	          <p><xsl:value-of select="Amerykanin"/> jest narodowości amerykańskiej</p>
+	        </xsl:when>
+	        <xsl:when test="Szwajcar">
+	          <p><xsl:value-of select="Szwajcar"/> jest narodowości szwajcarskiej</p>
+	        </xsl:when>
+	      
+	        <xsl:when test="Anglik">
+	          <p><xsl:value-of select="Anglik"/> jest narodowości angielskiej</p>
+	        </xsl:when>
+	        <xsl:otherwise>
+	          Inna narodowość
+	        </xsl:otherwise>
+	      </xsl:choose>
+    
+    	</xsl:for-each>
 		<h2>Podsumowanie:</h2>
 			<h4>Książki</h4>
 			<ol>
@@ -93,51 +115,7 @@
 		  		<li><b><i>Średnia cena książek &lt; 500str: </i></b><xsl:value-of select="Zadanie3/Podsumowanie/Inne/średnia_cena_książek_ponizej500"/></li>
 		  		<li><b><i>Data wygenerowania: </i></b><xsl:value-of select="Zadanie3/Podsumowanie/Inne/data_wygenerowania"/> </li>
 		 	</ol>
-  		<!-- <xsl:call-template name="podsumowanie"/> -->
 	</body>
 	</html>
 	</xsl:template>
-	<!-- TEMPLATY POD SPODEM NIE DZIALAJA. ZAMIAST WYPISYWAC WARTOSC NP.21 TO WYPISUJA CALA ZAWARTOSC 21 KSIAZEK-->
-		<!-- <xsl:template name="podsumowanie" match="Zadanie3/Podsumowanie/Ksiązki">
-		  <div class="Podsumowanie">
-		  	<xsl:call-template name="książki" />
-		  </div>
-		</xsl:template>
-
-		<xsl:template name="książki" match="liczba_książek_ogółem">
-		  <ul>
-		  	<li><b>Książki ogółem:</b><xsl:value-of select="count(liczba_książek_ogółem)"/></li>
-		  </ul>
-		</xsl:template> -->
-
-	<!-- 	<xsl:template name="wszystkieKsiazki" match="liczba_książek_ogółem">
-		  Książki ogółem: <li><xsl:value-of select="."/></li>
-		  <br />
-		</xsl:template>
-		<xsl:template name="pow500str" match="liczba_książek_powyżej500str">
-		  Liczba książek powyżej 500 str: <li><xsl:value-of select="@value"/></li>
-		  <br />
-		</xsl:template>
-		<xsl:template name="pon500str" match="liczba_książek_poniżej500str">
-		  Liczba książek poniżej 500 str: <li><xsl:value-of select="@value"/></li>
-		  <br />
-		</xsl:template> -->
-<!-- 
-		<xsl:template match="Autorzy">
-		  Artist: <span style="color:#00ff00">
-		  <xsl:value-of select="."/></span>
-		  <br />
-		</xsl:template>
-
-		<xsl:template match="Działy">
-		  Title: <span style="color:#ff0000">
-		  <xsl:value-of select="."/></span>
-		  <br />
-		</xsl:template>
-
-		<xsl:template match="Inne">
-		  Artist: <span style="color:#00ff00">
-		  <xsl:value-of select="."/></span>
-		  <br />
-		</xsl:template> -->
 </xsl:stylesheet>

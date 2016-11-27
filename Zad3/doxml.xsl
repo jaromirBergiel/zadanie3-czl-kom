@@ -40,11 +40,26 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:for-each>
 		</Książki_Poniżej500_stron>
 		<Autorzy_narodowość>
-			<Polak><xsl:value-of select="Zadanie3/autorzy/aut[narodowość=Polak] or Zadanie3/autorzy/aut[narodowość=Polka]"/></Polak>
-			<Amerykanin><xsl:value-of select="Zadanie3/autorzy/aut[narodowość=Amerykanin]"/></Amerykanin>
-			<Anglik><xsl:value-of select="Zadanie3/autorzy/aut[narodowość=Anglik] or Zadanie3/autorzy/aut[narodowość=Angielka]"/></Anglik>
-			<Szwajcar><xsl:value-of select="Zadanie3/autorzy/aut[narodowość=Szwajcar]"/></Szwajcar>
-			<Inna></Inna>		
+			<xsl:for-each select="Zadanie3/autorzy">
+				<xsl:choose>
+					<xsl:when test="@narodowość = 'Polak' or 'Polka'">
+						<Polak><xsl:value-of select="."/></Polak>
+					</xsl:when>
+					<xsl:when test="@narodowość = 'Anglik' or 'Angielka'">
+						<Anglik><xsl:value-of select="."/></Anglik>
+					</xsl:when>
+					<xsl:when test="@narodowość = 'Amerykanin'">
+						<Amerykanin><xsl:value-of select="."/></Amerykanin>
+					</xsl:when>
+					<xsl:when test="@narodowość = 'Szwajcar'">
+						<Szwajcar><xsl:value-of select="."/></Szwajcar>
+					</xsl:when>
+					<xsl:otherwise>
+						<Inne><xsl:value-of select="."/></Inne>
+					</xsl:otherwise>
+				</xsl:choose>
+
+			</xsl:for-each>		
 		</Autorzy_narodowość>
 	<Podsumowanie>
 		<Ksiązki>
