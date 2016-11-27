@@ -61,7 +61,7 @@
 					<td><xsl:value-of select="author"/></td>
 					<td><xsl:value-of select="title"/></td>
 					<td><xsl:value-of select="pages"/></td>
-					<xsl:apply-templates select="genre"/>
+					<td><xsl:apply-templates select="genre"/></td>
 					<td><xsl:value-of select="price"/></td>
 					<td><xsl:value-of select="vat"/></td>		
 					<th><xsl:value-of select="rating"/></th>
@@ -101,13 +101,11 @@
 	</html>
 	</xsl:template>
 	
-	<xsl:template match="genre">
-	<xsl:element name="font" namespace="{$output-namespace}">
-			<xsl:attribute name="size"><xsl:value-of select="3"/></xsl:attribute>
+	<xsl:template match="genre"><xsl:element name="em" namespace="{$output-namespace}">
+			<!-- <xsl:attribute name="size"><xsl:value-of select="3"/></xsl:attribute>-->
 			<xsl:attribute name="color"><xsl:value-of select="'red'"/></xsl:attribute>
 		<xsl:value-of select="node()"/>
-	</xsl:element>
-	</xsl:template>
+	</xsl:element></xsl:template>
 	<!-- TEMPLATY POD SPODEM NIE DZIALAJA. ZAMIAST WYPISYWAC WARTOSC NP.21 TO WYPISUJA CALA ZAWARTOSC 21 KSIAZEK-->
 		<!-- <xsl:template name="podsumowanie" match="Zadanie3/Podsumowanie/Ksiązki">
 		  <div class="Podsumowanie">
