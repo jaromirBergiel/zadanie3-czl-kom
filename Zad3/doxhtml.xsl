@@ -72,25 +72,11 @@
 		</table>
 		<h4>Narodowość autorów</h4>
 		<xsl:for-each select="Zadanie3/Autorzy_narodowość">
-	      <xsl:choose>
-	        <xsl:when test="Polak">
-	          <p><xsl:value-of select="Polak"/> jest narodowości polskiej</p>
-	        </xsl:when>
-	        <xsl:when test="Amerykanin">
-	          <p><xsl:value-of select="Amerykanin"/> jest narodowości amerykańskiej</p>
-	        </xsl:when>
-	        <xsl:when test="Szwajcar">
-	          <p><xsl:value-of select="Szwajcar"/> jest narodowości szwajcarskiej</p>
-	        </xsl:when>
-	      
-	        <xsl:when test="Anglik">
-	          <p><xsl:value-of select="Anglik"/> jest narodowości angielskiej</p>
-	        </xsl:when>
-	        <xsl:otherwise>
-	          Inna narodowość
-	        </xsl:otherwise>
-	      </xsl:choose>
-    
+	          <p><b><xsl:value-of select="Polak"/></b>,jest/są narodowości polskiej.</p>
+	          <p><b><xsl:value-of select="Amerykanin"/></b>, jest/są narodowości amerykańskiej.</p>
+	          <p><b><xsl:value-of select="Szwajcar"/></b>, jest/są narodowości szwajcarskiej.</p>
+	          <p><b><xsl:value-of select="Anglik"/></b>, jest/są narodowości angielskiej.</p>
+	          <p><b><xsl:value-of select="Inne"/></b>, jest/są innej narodowości.</p>
     	</xsl:for-each>
 		<h2>Podsumowanie:</h2>
 			<h4>Książki</h4>
@@ -123,8 +109,6 @@
 	</xsl:template>
 	
 	<xsl:template match="genre"><xsl:element name="em" namespace="{$output-namespace}">
-			<!-- <xsl:attribute name="size"><xsl:value-of select="3"/></xsl:attribute>-->
-			<xsl:attribute name="color"><xsl:value-of select="'red'"/></xsl:attribute>
 		<xsl:value-of select="node()"/>
 	</xsl:element>
 	</xsl:template>
